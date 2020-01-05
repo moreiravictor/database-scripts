@@ -1,0 +1,22 @@
+-- Table: public.posts
+
+-- DROP TABLE public.posts;
+
+CREATE TABLE public.posts
+(
+    post_id integer NOT NULL,
+    post_author character varying(255) COLLATE pg_catalog."default",
+    post_category integer,
+    post_content character varying(255) COLLATE pg_catalog."default",
+    post_date timestamp without time zone,
+    post_likes integer,
+    post_title character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT posts_pkey PRIMARY KEY (post_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.posts
+    OWNER to postgres;
